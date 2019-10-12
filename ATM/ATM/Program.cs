@@ -17,6 +17,13 @@ namespace ATM
 
             atm.calculateNotes(Withdraw);
 
+            atm.ViewBalance();
+
+            atm.Deposit(1000);
+
+            atm.ViewBalance();
+
+
         }
     }
 }

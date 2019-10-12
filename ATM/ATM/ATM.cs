@@ -12,10 +12,13 @@ namespace ATM
         private int Note10;
         private int Note5;
         private int Note1;
+        private double balance;
 
         public void calculateNotes(int value)
         {
-            while(value > 0)
+            int bkp = value;
+
+            while (value > 0)
             {
                 //Calculate amount of banknotes of 50
                 if (value >= 50)
@@ -50,6 +53,18 @@ namespace ATM
             Console.WriteLine(Note10 + "\n");
             Console.WriteLine(Note5 + "\n");
             Console.WriteLine(Note1 + "\n");
+
+            balance -= bkp;
+        }
+
+        public void Deposit(int value)
+        {
+            balance += value;
+        }
+
+        public void ViewBalance()
+        {
+            Console.WriteLine("Seu saldo atual é de:" + balance);
         }
     }
 }
